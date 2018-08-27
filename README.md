@@ -1,3 +1,6 @@
+#### _Updated fork of [Node-read](https://github.com/bndr/node-read). Original README follows._
+---
+
 [![NPM](https://nodei.co/npm/node-read.png?downloads=true)](https://nodei.co/npm/node-read/)
 # Node-read
 
