@@ -7,18 +7,20 @@
     "description": "Get Clean Reading Content from every web page",
     "homepage": "https://github.com/bndr/node-read",
     "dependencies": {
-        "fetch": "*",
-        "cheerio": "^0.19.0"
+        "cheerio": "^1.0.0-rc.2",
+        "fetch": "*"
     },
     "devDependencies": {
         "mocha": "*",
         "should": "*",
-        "nock": "~0.27.1"
+        "nock": "~9.6.1"
     },
-    "licenses": [{
-        "type": "Apache License 2.0",
-        "url": "http://www.apache.org/licenses/LICENSE-2.0"
-    }],
+    "licenses": [
+        {
+            "type": "Apache License 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0"
+        }
+    ],
     "keywords": [
         "readability",
         "readable",
