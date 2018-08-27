@@ -39,7 +39,7 @@ Article.prototype.getContent = function() {
   return this.cache['article-content'] = content;
 }
 
-// Better Article Title Extraction. 
+// Better Article Title Extraction.
 // Author Zihua Li https://github.com/luin/node-readability
 Article.prototype.getTitle = function() {
   if (typeof this.cache['article-title'] !== 'undefined') {
@@ -94,6 +94,7 @@ var read = module.exports = function(html, options, callback) {
   if (!html.match(/^\s*</)) {
     req(html, options, function(err, res, body) {
       if (err) {
+        console.log("err is: ", err);
         return callback(err);
       }
       parseDOM(body.toString(), url.parse(html));
@@ -108,7 +109,7 @@ var read = module.exports = function(html, options, callback) {
       normalizeWhitespace: true,
       decodeEntities: false
     });
-    if ($('body').length < 1) return callback(new Error("No body tag was found"));
+    if ($('body').contents().length == 0) return callback(new Error("No body tag was found"));
     return callback(null, new Article($, options, url), url);
   }
 }
